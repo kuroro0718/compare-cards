@@ -1,6 +1,4 @@
 // Define test data
-const CARDS_NUM = 5;
-
 const incompleteCards = [
   {
     suit: 'diamonds',
@@ -214,7 +212,6 @@ const testData = {
   fullHouse,
   flush,
   unmatched,
-  CARDS_NUM,
 };
 
 module.exports = testData;
