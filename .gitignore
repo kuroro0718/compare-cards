@@ -1,0 +1,19 @@
+# node_module
+node_modules/
+
+# Yarn lock file
+yarn.lock
+
+# Yarn error log
+yarn-error.log
+
+# nyc output
+.nyc_output/
+
+# Coverage report
+coverage/
+
+# api config and document folder (this will be generated during the runtime)
+apidoc.json
+public/api/
+orderList.csv

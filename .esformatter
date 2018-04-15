@@ -1,0 +1,18 @@
+{
+  "plugins": [
+     "esformatter-align",
+     "esformatter-add-trailing-commas",
+     "esformatter-braces",
+     "esformatter-ignore",
+     "esformatter-limit-linebreaks",
+     "esformatter-quote-props",
+     "esformatter-quotes",
+     "esformatter-spaced-lined-comment",
+     "esformatter-semicolons"
+   ],
+   "quotes": {
+     "type": "single",
+     "avoidEscape": false
+   },
+   "LimitLineBreaks": 2
+}
