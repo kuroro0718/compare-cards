@@ -93,7 +93,7 @@ const straight = [
     rank: 1,
   },
   {
-    suit: 'clubs',
+    suit: 'diamonds',
     rank: 2,
   },
   {
@@ -101,12 +101,12 @@ const straight = [
     rank: 3,
   },
   {
-    suit: 'clubs',
+    suit: 'spades',
     rank: 4,
   },
   {
     suit: 'clubs',
-    rank: 8,
+    rank: 5,
   },
 ];
 

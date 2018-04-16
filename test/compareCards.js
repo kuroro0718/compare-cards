@@ -2,6 +2,7 @@ const assert = require('assert');
 const debug  = require('debug')('test:compareCards');
 
 const compareCards = require('src/compareCards');
+const cardConst    = require('src/constant');
 const testData     = require('./data/testData');
 
 describe('Compare two deck of cards unit test', () => {
@@ -26,47 +27,47 @@ describe('Compare two deck of cards unit test', () => {
 
   it('Compare straight flush and other category', () => {
     let result = compareCards(testData.straightFlush, testData.fourOfAKind);
-    assert.equal(result.winner, 'deck1', 'The winner should be deck1');
-    assert.equal(result.category, 'StraightFlush', 'The winning category should be StraightFlush');
+    assert.equal(result.winner, 'Deck1', 'The winner should be Deck1');
+    assert.equal(result.category, cardConst.StraightFlush, 'The winning category should be StraightFlush');
 
     result = compareCards(testData.straightFlush, testData.fullHouse);
-    assert.equal(result.winner, 'deck1', 'The winner should be deck1');
+    assert.equal(result.winner, 'Deck1', 'The winner should be Deck1');
 
     result = compareCards(testData.straightFlush, testData.fullHouse);
-    assert.equal(result.winner, 'deck1', 'The winner should be deck1');
+    assert.equal(result.winner, 'Deck1', 'The winner should be Deck1');
 
     result = compareCards(testData.straightFlush, testData.flush);
-    assert.equal(result.winner, 'deck1', 'The winner should be deck1');
+    assert.equal(result.winner, 'Deck1', 'The winner should be Deck1');
 
     result = compareCards(testData.straightFlush, testData.straight);
-    assert.equal(result.winner, 'deck1', 'The winner should be deck1');
+    assert.equal(result.winner, 'Deck1', 'The winner should be Deck1');
   });
 
   it('Compare four of a kind and other category', () => {
     let result = compareCards(testData.fourOfAKind, testData.fullHouse);
-    assert.equal(result.winner, 'deck1', 'The winner should be deck1');
-    assert.equal(result.category, 'FourOfAKind', 'The winning category should be FourOfAKind');
+    assert.equal(result.winner, 'Deck1', 'The winner should be Deck1');
+    assert.equal(result.category, cardConst.FourOfAKind, 'The winning category should be FourOfAKind');
 
     result = compareCards(testData.fourOfAKind, testData.flush);
-    assert.equal(result.winner, 'deck1', 'The winner should be deck1');
+    assert.equal(result.winner, 'Deck1', 'The winner should be Deck1');
 
     result = compareCards(testData.fourOfAKind, testData.straight);
-    assert.equal(result.winner, 'deck1', 'The winner should be deck1');
+    assert.equal(result.winner, 'Deck1', 'The winner should be Deck1');
   });
 
   it('Compare full house and other category', () => {
     let result = compareCards(testData.fullHouse, testData.flush);
-    assert.equal(result.winner, 'deck1', 'The winner should be deck1');
-    assert.equal(result.category, 'FullHouse', 'The winning category should be FullHouse');
+    assert.equal(result.winner, 'Deck1', 'The winner should be Deck1');
+    assert.equal(result.category, cardConst.FullHouse, 'The winning category should be FullHouse');
 
     result = compareCards(testData.fullHouse, testData.straight);
-    assert.equal(result.winner, 'deck1', 'The winner should be deck1');
+    assert.equal(result.winner, 'Deck1', 'The winner should be Deck1');
   });
 
   it('Compare flush and other category', () => {
     const result = compareCards(testData.flush, testData.straight);
-    assert.equal(result.winner, 'deck1', 'The winner should be deck1');
-    assert.equal(result.category, 'Flush', 'The winning category should be Flush');
+    assert.equal(result.winner, 'Deck1', 'The winner should be Deck1');
+    assert.equal(result.category, cardConst.Flush, 'The winning category should be Flush');
   });
 
   after(() => {
